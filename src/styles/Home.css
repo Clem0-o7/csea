@@ -1,0 +1,16 @@
+.home-bg {
+    background-image: url('https://wallpaperset.com/w/full/8/8/0/462749.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+  }
+  
+  h1 {
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+  

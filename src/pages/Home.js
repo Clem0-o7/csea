@@ -1,13 +1,15 @@
 import React from 'react';
+import { Row, Col } from 'react-bootstrap';
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold mb-4">Welcome to CSEA</h1>
-      <p className="text-lg text-center max-w-lg">
-        The Computer Science and Engineering Association (CSEA) at Thiagarajar College of Engineering is dedicated to fostering collaboration, innovation, and skill development among students. Join us in our journey to explore technology and achieve excellence!
-      </p>
-    </div>
+    <Row className="min-vh-100 d-flex align-items-center justify-content-center text-black">
+      <Col xs={12} md={8} lg={6}>
+        <h1 className="text-center">Welcome to CSEA</h1>
+        <p className="text-center">Your one-stop destination for placement information and resources.</p>
+        <p className="text-center">Explore announcements, events, and more!</p>
+      </Col>
+    </Row>
   );
 };
 

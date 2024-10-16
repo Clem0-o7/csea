@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { db } from '../firebase/firebaseConfig';
 import { ref, onValue } from 'firebase/database';
+import { Row, Col, Card, Container } from 'react-bootstrap';
 
 const Announcements = () => {
   const [announcements, setAnnouncements] = useState([]);
@@ -16,17 +17,21 @@ const Announcements = () => {
   }, []);
 
   return (
-    <div className="min-h-screen p-4 bg-gray-100">
-      <h2 className="text-3xl font-bold mb-4">Announcements</h2>
-      <div className="space-y-4">
+    <Container className="min-vh-100 p-4">
+      <h2 className="text-center mb-4 text-black">Announcements</h2>
+      <Row>
         {announcements.map((announcement, index) => (
-          <div key={index} className="bg-white p-4 rounded shadow-md">
-            <h3 className="text-xl font-semibold">{announcement.title}</h3>
-            <p>{announcement.description}</p>
-          </div>
+          <Col key={index} xs={12} md={6} lg={4} className="mb-4">
+            <Card className="shadow-sm">
+              <Card.Body>
+                <Card.Title className="font-weight-bold">{announcement.title}</Card.Title>
+                <Card.Text>{announcement.description}</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
         ))}
-      </div>
-    </div>
+      </Row>
+    </Container>
   );
 };
 

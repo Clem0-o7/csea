@@ -10,8 +10,11 @@ import Gallery from './pages/Gallery';
 import OfficeBearers from './pages/OfficeBearers';
 //import ProtectedRoute from './routes/ProtectedRoute';
 import AdminPanel from './pages/AdminPanel';
-import Navbar from './components/Navbar';
+import Navbar from './components/CustomNavbar';
 import Footer from './components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 function App() {
   return (
